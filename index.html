@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width">
+		<title>Paul Kabira Demo</title>
+		<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+  	$(function(){
+  		$('input[type=button').click(function(e){
+  			$('#addemo').slideToggle();
+  		});
+  	});
+  </script>
+  <style>
+  	@media only screen and (min-width: 310px) and (max-width:500px) {
+		.adcontainer {
+			left:0;
+			position: fixed;
+			text-align:center;
+			bottom: 0px;
+			width:100%;
+			z-index:999;
+		}
+		#addemo{
+			border: 1px solid black;
+		}
+	}
+  </style>
+	</head>
+
+	<body>
+		<h1 class="full" style="height:10000px">BODY CONTENT</h1>
+		<div class="adcontainer">
+			<input type="button" value="Toggle Ad">
+			<div id="addemo">
+				Your Ad Code here
+			</div>	
+		</div>
+		
+	</body>
+</html>
