@@ -10,12 +10,12 @@
   <script>
   	$(function(){
   		$('input[type=button').click(function(e){
-  			$('#addemo').slideToggle();
+  			$('#addemo').slideToggle(200);
   		});
   	});
   </script>
   <style>
-  	@media only screen and (min-width: 310px) and (max-width:500px) {
+  	
 		.adcontainer {
 			left:0;
 			position: fixed;
@@ -26,17 +26,21 @@
 		}
 		#addemo{
 			border: 1px solid black;
+			padding:20px;
 		}
-	}
+	
   </style>
 	</head>
 
 	<body>
-		<h1 class="full" style="height:10000px">BODY CONTENT</h1>
+		<h2 class="full" style="height:10000px">This is a demo for sticky ad by Paul Kabira. This demo features the basic working of the requirements of your project.To test this, open this file in a mobile browser and scroll through page.<br> <br>The 'STYLING' of the toggle ad button and the code to display this ad only on mobile screen will also be given in the final draft. <br>
+			<span style="text-align:right;display: block">Regards,<br>
+			Paul Kabira.</span>
+		</h2>
 		<div class="adcontainer">
 			<input type="button" value="Toggle Ad">
 			<div id="addemo">
-				Your Ad Code here
+				Your Ad Code here.
 			</div>	
 		</div>
 		
