@@ -3,17 +3,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width">
 		<title>Paul Kabira Demo</title>
-		<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-  <script>
-  	$(function(){
-  		$('input[type=button').click(function(e){
-  			$('#addemo').slideToggle(200);
-  		});
-  	});
-  </script>
+		
   <style>
   	
 		.adcontainer {
@@ -26,7 +16,18 @@
 		}
 		#addemo{
 			border: 1px solid black;
-			padding:20px;
+			padding:15px;
+			transition:all 400ms ease;
+			height:50px;
+			-webkit-box-sizing: border-box;
+    		-moz-box-sizing: border-box;
+    		box-sizing: border-box;
+		}
+
+		input[type='checkbox']:checked + #addemo{
+			height:0px;
+			padding:0px;
+
 		}
 	
   </style>
@@ -38,11 +39,28 @@
 			Paul Kabira.</span>
 		</h2>
 		<div class="adcontainer">
-			<input type="button" value="Toggle Ad">
+			<label for="toggleHide">Toggle Ad </label><input type="checkbox" value="Toggle Ad" id="toggleHide" name="toggleHide">
 			<div id="addemo">
 				Your Ad Code here.
 			</div>	
 		</div>
-		
+		<script>/*
+			var adContainer = document.getElementById('addemo');
+			var adToggle = document.getElementById('toggleHide');
+			var hidden = false;
+			adToggle.onclick = function(){
+				if(hidden) {
+					adContainer.style.height = '100%';
+					adContainer.style.padding = '20px';
+					adContainer.style.overflow = 'visible';
+					hidden = false;
+				} else { 
+					adContainer.style.height = '0%';
+					adContainer.style.padding = '0px';
+					adContainer.style.overflow = 'hidden';
+					hidden = true;
+				}
+			}; */
+		</script>
 	</body>
 </html>
